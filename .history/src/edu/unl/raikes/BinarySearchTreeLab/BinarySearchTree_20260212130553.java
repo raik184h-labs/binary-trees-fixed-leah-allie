@@ -1,6 +1,4 @@
 package edu.unl.raikes.BinarySearchTreeLab;
-import java.util.ArrayList;
-import java.util.List;
 
 //TODO: ADD JAVADOC COMMENT
 public class BinarySearchTree {
@@ -76,23 +74,11 @@ public class BinarySearchTree {
 	// TODO: ADD JAVADOC COMMENT
 	public String toString() {
 		String toReturn = "Binary Search Tree of Size: " + size + "\n";
-		BinarySearchNode currNode = this.root;
-		List<BinarySearchNode> list = new ArrayList<BinarySearchNode>();
-		inOrderTraversal(currNode, list);
-		for (BinarySearchNode node : list) {
-			if (node != null) {
-				toReturn += node.toString();
-			}
+		// TODO: ADD COMMENT
+		if (root != null) {
+			toReturn += root.toString();
 		}
 		return toReturn;
 	}
 
-	private void inOrderTraversal(BinarySearchNode root, List<BinarySearchNode> result) {
-		if (root == null) {
-			return;
-		} 
-		inOrderTraversal(root.leftChild, result);
-		result.add(root.parent);
-		inOrderTraversal(root.rightChild, result);
-	}
 }

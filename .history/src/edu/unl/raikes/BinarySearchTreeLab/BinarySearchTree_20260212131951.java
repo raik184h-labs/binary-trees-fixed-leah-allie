@@ -81,7 +81,7 @@ public class BinarySearchTree {
 		inOrderTraversal(currNode, list);
 		for (BinarySearchNode node : list) {
 			if (node != null) {
-				toReturn += node.toString();
+				toReturn += root.toString();
 			}
 		}
 		return toReturn;
