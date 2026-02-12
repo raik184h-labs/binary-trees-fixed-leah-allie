@@ -2,6 +2,8 @@ package edu.unl.raikes.BinarySearchTreeLab;
 
 import java.util.ArrayList;
 import java.util.List;
+import edu.unl.raikes.BinarySearchTreeLab.InOrderTraversal;
+import org.w3c.dom.Node;
 
 /**
  * The binary search tree.
@@ -81,6 +83,7 @@ public class BinarySearchTree {
                 deleted = this.root.delete(key);
             }
 
+<<<<<<< HEAD
             if (deleted != null) {
                 this.size--;
             }
@@ -116,5 +119,22 @@ public class BinarySearchTree {
         this.inOrderTraversal(root.leftChild, result);
         result.add(root);
         this.inOrderTraversal(root.rightChild, result);
+=======
+	// TODO: ADD JAVADOC COMMENT
+	public String toString() {
+		String toReturn = "Binary Search Tree of Size: " + size + "\n";
+		BinarySearchNode currNode = this.root;
+		List<BinarySearchNode> list = InOrderTraversal.inOrderTraversal(this);
+		for (BinarySearchNode node : list) {
+			if (node != null) {
+				toReturn += node.toString();
+			}
+		}
+		return toReturn;
+	}
+
+    public BinarySearchNode getRoot() {
+        return this.root;
+>>>>>>> 75d60fef13f7efebddb2bce91ce4241be366813f
     }
 }
