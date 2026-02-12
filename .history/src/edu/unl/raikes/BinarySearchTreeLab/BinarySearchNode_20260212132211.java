@@ -131,26 +131,4 @@ class BinarySearchNode {
 		return toReturn;
 	}
 
-    /**
-	 * @return the leftChild
-	 */
-	public BinarySearchNode getLeftChild() {
-		return leftChild;
-	}
-
-    /**
-	 * @return the right
-	 */
-	public BinarySearchNode getRightChild() {
-		return rightChild;
-	}
-
-    /**
-	 * @return the root
-	 */
-	public BinarySearchNode getParent() {
-		return parent;
-	}
-
-    
 }
